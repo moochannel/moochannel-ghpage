@@ -1,12 +1,12 @@
-import aspectRatio from '@tailwindcss/aspect-ratio';
-import type { Config } from 'tailwindcss';
+import aspectRatio from '@tailwindcss/aspect-ratio'
+import type { Config } from 'tailwindcss'
 
 export default {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+  content: ['./src/**/*.{html,js,svelte,ts}'],
 
-	theme: {
-		extend: {}
-	},
+  theme: {
+    extend: {},
+  },
 
-	plugins: [aspectRatio]
-} satisfies Config;
+  plugins: [aspectRatio],
+} satisfies Config
