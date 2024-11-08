@@ -1,13 +1,29 @@
 {
-	"useTabs": true,
+	"semi": false,
 	"singleQuote": true,
-	"trailingComma": "none",
 	"printWidth": 100,
-	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
+	"plugins": [
+		"prettier-plugin-svelte",
+		"prettier-plugin-tailwindcss",
+		"@ianvs/prettier-plugin-sort-imports"
+	],
+	"importOrder": ["<BUILTIN_MODULES>", "", "<THIRD_PARTY_MODULES>", "", "^[./]"],
+	"importOrderTypeScriptVersion": "5.4.5",
+	"importOrderParserPlugins": ["typescript", "decorators-legacy"],
 	"overrides": [
 		{
 			"files": "*.svelte",
 			"options": {
+				"importOrder": [
+					"<BUILTIN_MODULES>",
+					"",
+					"^(svelte/(.*)$)|^(svelte$)",
+					"^(@sveltejs/(.*)$)|^(@sveltejs/kit$)",
+					"",
+					"<THIRD_PARTY_MODULES>",
+					"",
+					"^[./]"
+				],
 				"parser": "svelte"
 			}
 		}
