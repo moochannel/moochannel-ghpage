@@ -13,6 +13,13 @@ export class FetchWorkExperiencesUseCase {
   ) {}
 
   public execute(): ResultAsync<WorkExperience[], Error> {
-    return this.workExperienceRepository.list()
+    return this.workExperienceRepository.list().map((exps) => {
+      const copyExps = [...exps].reverse()
+      const reversedExps = copyExps.map((exps) => {
+        const projects = exps.projects.reverse()
+        return { ...exps, projects }
+      })
+      return reversedExps
+    })
   }
 }
