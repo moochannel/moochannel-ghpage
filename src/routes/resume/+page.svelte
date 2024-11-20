@@ -10,34 +10,30 @@
   let { data }: { data: PageData } = $props()
 </script>
 
-<div class="bg-slate-100">
-  <div class="container mx-auto bg-white px-4 py-8 shadow-md">
-    <div class="mb-8 bg-green-100 p-6 shadow-md">
-      <h1 class="mb-2 text-3xl font-bold">職務経歴書</h1>
-    </div>
-
-    <section class="mt-4">
-      <Personal />
-    </section>
-
-    <section class="mt-4">
-      <Skills />
-    </section>
-
-    <section class="mt-4">
-      <TechStacks />
-    </section>
-
-    <section class="mt-4">
-      <Strengths />
-    </section>
-
-    <section class="mt-4">
-      <WorkOverview />
-    </section>
-
-    <section class="mt-4">
-      <WorkExperiences workExperiences={data.workExperiences} />
-    </section>
-  </div>
+<div class="mb-8 bg-green-100 p-6 shadow-md">
+  <h1 class="mb-2 text-3xl font-bold">職務経歴書</h1>
 </div>
+
+<section class="mt-4">
+  <Personal />
+</section>
+
+<section class="mt-4">
+  <Skills />
+</section>
+
+<section class="mt-4">
+  <TechStacks />
+</section>
+
+<section class="mt-4">
+  <Strengths />
+</section>
+
+<section class="mt-4">
+  <WorkOverview />
+</section>
+
+<section class="mt-4">
+  <WorkExperiences workExperiences={data.workExperiences} />
+</section>
